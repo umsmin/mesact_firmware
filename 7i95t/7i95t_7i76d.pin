@@ -45,7 +45,7 @@ Modules in configuration:
   Instance Stride: 4 bytes
 
   Module: MuxedQCount
-  There are 12 of MuxedQCount in configuration
+  There are 8 of MuxedQCount in configuration
   Version: 4
   Registers: 5
   BaseAddress: 3600
@@ -72,7 +72,7 @@ Modules in configuration:
   Instance Stride: 64 bytes
 
   Module: StepGen
-  There are 6 of StepGen in configuration
+  There are 11 of StepGen in configuration
   Version: 2
   Registers: 10
   BaseAddress: 2000
@@ -124,21 +124,21 @@ TB4-2,3                 8   IOPort       StepGen          4        Step/Table1  
 TB4-4,5                 9   IOPort       StepGen          4        Dir/Table2      (Out)
 TB4-8,9                10   IOPort       StepGen          5        Step/Table1     (Out)
 TB4-10,11              11   IOPort       StepGen          5        Dir/Table2      (Out)
-TB4-14,15              12   IOPort       SSerial          0        RXData3         (In)
-TB4-16,17              13   IOPort       SSerial          0        TXData3         (Out)
-Internal-TXen          14   IOPort       SSerial          0        TXEn3           (Out)
-TB4-20,21              15   IOPort       SSerial          0        RXData4         (In)
-TB4-22,23              16   IOPort       SSerial          0        TXData4         (Out)
-Internal-TXen          17   IOPort       SSerial          0        TXEn4           (Out)
-TB1-1,2,9,10           18   IOPort       MuxedQCount      3        MuxQ-A          (In)
-TB1-4,5,12,13          19   IOPort       MuxedQCount      3        MuxQ-B          (In)
-TB1-7,8,15,16          20   IOPort       MuxedQCount      3        MuxQ-IDX        (In)
-TB1-17,18 TB2-1,2      21   IOPort       MuxedQCount      4        MuxQ-A          (In)
-TB1-20,21 TB2-4,5      22   IOPort       MuxedQCount      4        MuxQ-B          (In)
-TB1-23,24,TB2-7,8      23   IOPort       MuxedQCount      4        MuxQ-IDX        (In)
-TB2-9,10,17,18         24   IOPort       MuxedQCount      5        MuxQ-A          (In)
-TB2-11,12,20,21        25   IOPort       MuxedQCount      5        MuxQ-B          (In)
-TB2-15,16,23,24        26   IOPort       MuxedQCount      5        MuxQ-IDX        (In)
+TB4-14,15              12   IOPort       SSerial          0        RXData2         (In)
+TB4-16,17              13   IOPort       SSerial          0        TXData2         (Out)
+Internal-TXen          14   IOPort       SSerial          0        TXEn2           (Out)
+TB4-20,21              15   IOPort       SSerial          0        RXData3         (In)
+TB4-22,23              16   IOPort       SSerial          0        TXData3         (Out)
+Internal-TXen          17   IOPort       SSerial          0        TXEn3           (Out)
+TB1-1,2,9,10           18   IOPort       MuxedQCount      0        MuxQ-A          (In)
+TB1-4,5,12,13          19   IOPort       MuxedQCount      0        MuxQ-B          (In)
+TB1-7,8,15,16          20   IOPort       MuxedQCount      0        MuxQ-IDX        (In)
+TB1-17,18 TB2-1,2      21   IOPort       MuxedQCount      1        MuxQ-A          (In)
+TB1-20,21 TB2-4,5      22   IOPort       MuxedQCount      1        MuxQ-B          (In)
+TB1-23,24,TB2-7,8      23   IOPort       MuxedQCount      1        MuxQ-IDX        (In)
+TB2-9,10,17,18         24   IOPort       MuxedQCount      2        MuxQ-A          (In)
+TB2-11,12,20,21        25   IOPort       MuxedQCount      2        MuxQ-B          (In)
+TB2-15,16,23,24        26   IOPort       MuxedQCount      2        MuxQ-IDX        (In)
 Internal-EncMux        27   IOPort       MuxedQCountSel   0        MuxSel0         (Out)
 TB5-1,12, TB6-1,24     28   IOPort       InMux            0        Addr0           (Out)
 
@@ -157,21 +157,21 @@ TB5-19,20              37   IOPort       SSR              0        Out-03       
 TB5-21,22              38   IOPort       SSR              0        Out-04          (Out)
 TB5-23,24              39   IOPort       SSR              0        Out-05          (Out)
 Internal-SSR           40   IOPort       SSR              0        AC Ref          (Out)
-P1-01/DB25-01          41   IOPort       SSerial          0        TXEn2           (Out)
-P1-02/DB25-14          42   IOPort       SSerial          0        TXData2         (Out)
-P1-03/DB25-02          43   IOPort       SSerial          0        RXData2         (In)
-P1-04/DB25-15          44   IOPort       SSerial          0        TXData1         (Out)
-P1-05/DB25-03          45   IOPort       SSerial          0        RXData1         (In)
-P1-06/DB25-16          46   IOPort       SSerial          0        TXData0         (Out)
-P1-07/DB25-04          47   IOPort       SSerial          0        RXData0         (In)
-P1-08/DB25-17          48   IOPort       MuxedQCountSel   0        MuxSel0         (Out)
-P1-09/DB25-05          49   IOPort       MuxedQCount      0        MuxQ-A          (In)
-P1-11/DB25-06          50   IOPort       MuxedQCount      0        MuxQ-B          (In)
-P1-13/DB25-07          51   IOPort       MuxedQCount      0        MuxQ-IDX        (In)
-P1-15/DB25-08          52   IOPort       MuxedQCount      1        MuxQ-A          (In)
-P1-17/DB25-09          53   IOPort       MuxedQCount      1        MuxQ-B          (In)
-P1-19/DB25-10          54   IOPort       MuxedQCount      1        MuxQ-IDX        (In)
-P1-21/DB25-11          55   IOPort       MuxedQCount      2        MuxQ-A          (In)
-P1-23/DB25-12          56   IOPort       MuxedQCount      2        MuxQ-B          (In)
-P1-25/DB25-13          57   IOPort       MuxedQCount      2        MuxQ-IDX        (In)
+P1-01/DB25-01          41   IOPort       StepGen          6        Dir/Table2      (Out)
+P1-02/DB25-14          42   IOPort       StepGen          6        Step/Table1     (Out)
+P1-03/DB25-02          43   IOPort       StepGen          7        Dir/Table2      (Out)
+P1-04/DB25-15          44   IOPort       StepGen          7        Step/Table1     (Out)
+P1-05/DB25-03          45   IOPort       StepGen          8        Dir/Table2      (Out)
+P1-06/DB25-16          46   IOPort       StepGen          8        Step/Table1     (Out)
+P1-07/DB25-04          47   IOPort       StepGen          9        Dir/Table2      (Out)
+P1-08/DB25-17          48   IOPort       StepGen          9        Step/Table1     (Out)
+P1-09/DB25-05          49   IOPort       StepGen         10        Dir/Table2      (Out)
+P1-11/DB25-06          50   IOPort       StepGen         10        Step/Table1     (Out)
+P1-13/DB25-07          51   IOPort       SSerial          0        TXData0         (Out)
+P1-15/DB25-08          52   IOPort       SSerial          0        RXData0         (In)
+P1-17/DB25-09          53   IOPort       SSerial          0        TXData1         (Out)
+P1-19/DB25-10          54   IOPort       SSerial          0        RXData1         (In)
+P1-21/DB25-11          55   IOPort       MuxedQCount      3        MuxQ-IDX        (In)
+P1-23/DB25-12          56   IOPort       MuxedQCount      3        MuxQ-B          (In)
+P1-25/DB25-13          57   IOPort       MuxedQCount      3        MuxQ-A          (In)
 
