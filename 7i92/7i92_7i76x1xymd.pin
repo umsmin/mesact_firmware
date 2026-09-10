@@ -45,7 +45,7 @@ Modules in configuration:
   Instance Stride: 4 bytes
 
   Module: QCount
-  There are 3 of QCount in configuration
+  There are 1 of QCount in configuration
   Version: 2
   Registers: 5
   BaseAddress: 3000
@@ -71,6 +71,15 @@ Modules in configuration:
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
+  Module: XYMod
+  There are 1 of XYMod in configuration
+  Version: 0
+  Registers: 11
+  BaseAddress: 9200
+  ClockFrequency: 100.000 MHz
+  Register Stride: 256 bytes
+  Instance Stride: 4 bytes
+
   Module: LED
   There are 1 of LED in configuration
   Version: 0
@@ -91,16 +100,16 @@ DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func
 15                      3   IOPort       StepGen          1        Step/Table1     (Out)
  3                      4   IOPort       StepGen          2        Dir/Table2      (Out)
 16                      5   IOPort       StepGen          2        Step/Table1     (Out)
- 4                      6   IOPort       StepGen          3        Dir/Table2      (Out)
-17                      7   IOPort       StepGen          3        Step/Table1     (Out)
- 5                      8   IOPort       StepGen          4        Dir/Table2      (Out)
- 6                      9   IOPort       StepGen          4        Step/Table1     (Out)
+ 4                      6   IOPort       XYMod            0        XData           (Out)
+17                      7   IOPort       XYMod            0        YData           (Out)
+ 5                      8   IOPort       XYMod            0        Clk             (Out)
+ 6                      9   IOPort       XYMod            0        Sync            (Out)
  7                     10   IOPort       SSerial          0        TXData0         (Out)
  8                     11   IOPort       SSerial          0        RXData0         (In)
  9                     12   IOPort       SSerial          0        TXData1         (Out)
 10                     13   IOPort       SSerial          0        RXData1         (In)
-11                     14   IOPort       QCount           2        Quad-A          (In)
-12                     15   IOPort       QCount           1        Quad-A          (In)
+11                     14   IOPort       QCount           0        Quad-IDX        (In)
+12                     15   IOPort       QCount           0        Quad-B          (In)
 13                     16   IOPort       QCount           0        Quad-A          (In)
 
 IO Connections for P1

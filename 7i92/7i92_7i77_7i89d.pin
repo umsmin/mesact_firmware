@@ -45,8 +45,8 @@ Modules in configuration:
   Instance Stride: 4 bytes
 
   Module: MuxedQCount
-  There are 6 of MuxedQCount in configuration
-  Version: 3
+  There are 14 of MuxedQCount in configuration
+  Version: 4
   Registers: 5
   BaseAddress: 3600
   ClockFrequency: 100.000 MHz
@@ -63,7 +63,7 @@ Modules in configuration:
   Instance Stride: 4 bytes
 
   Module: SSerial
-  There are 2 of SSerial in configuration
+  There are 1 of SSerial in configuration
   Version: 0
   Registers: 6
   BaseAddress: 5B00
@@ -106,21 +106,21 @@ DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func
 IO Connections for P1
 DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
- 1                     17   IOPort       SSerial          1        RXData0         (In)
-14                     18   IOPort       SSerial          1        RXData1         (In)
- 2                     19   IOPort       SSerial          1        RXData2         (In)
-15                     20   IOPort       SSerial          1        RXData3         (In)
- 3                     21   IOPort       SSerial          1        TXData0         (Out)
-16                     22   IOPort       SSerial          1        TXData1         (Out)
- 4                     23   IOPort       SSerial          1        TXData2         (Out)
-17                     24   IOPort       SSerial          1        TXData3         (Out)
- 5                     25   IOPort       SSerial          1        RXData4         (In)
- 6                     26   IOPort       SSerial          1        RXData5         (In)
- 7                     27   IOPort       None           
- 8                     28   IOPort       None           
- 9                     29   IOPort       SSerial          1        TXData4         (Out)
-10                     30   IOPort       SSerial          1        TXData5         (Out)
-11                     31   IOPort       None           
-12                     32   IOPort       None           
-13                     33   IOPort       None           
+ 1                     17   IOPort       MuxedQCount      3        MuxQ-A          (In)
+14                     18   IOPort       MuxedQCount      3        MuxQ-B          (In)
+ 2                     19   IOPort       MuxedQCount      3        MuxQ-IDX        (In)
+15                     20   IOPort       MuxedQCount      4        MuxQ-A          (In)
+ 3                     21   IOPort       MuxedQCount      4        MuxQ-B          (In)
+16                     22   IOPort       MuxedQCount      4        MuxQ-IDX        (In)
+ 4                     23   IOPort       MuxedQCount      5        MuxQ-A          (In)
+17                     24   IOPort       MuxedQCount      5        MuxQ-B          (In)
+ 5                     25   IOPort       MuxedQCount      5        MuxQ-IDX        (In)
+ 6                     26   IOPort       MuxedQCount      6        MuxQ-A          (In)
+ 7                     27   IOPort       MuxedQCount      6        MuxQ-B          (In)
+ 8                     28   IOPort       MuxedQCount      6        MuxQ-IDX        (In)
+ 9                     29   IOPort       MuxedQCountSel   6        MuxSel0         (Out)
+10                     30   IOPort       None           
+11                     31   IOPort       SSerial          0        RXData3         (In)
+12                     32   IOPort       SSerial          0        TXData3         (Out)
+13                     33   IOPort       SSerial          0        TXEn3           (Out)
 

@@ -44,11 +44,38 @@ Modules in configuration:
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
-  Module: QCount
-  There are 3 of QCount in configuration
-  Version: 2
+  Module: MuxedQCount
+  There are 12 of MuxedQCount in configuration
+  Version: 4
   Registers: 5
-  BaseAddress: 3000
+  BaseAddress: 3600
+  ClockFrequency: 100.000 MHz
+  Register Stride: 256 bytes
+  Instance Stride: 4 bytes
+
+  Module: MuxedQCountSel
+  There are 1 of MuxedQCountSel in configuration
+  Version: 0
+  Registers: 0
+  BaseAddress: 0000
+  ClockFrequency: 100.000 MHz
+  Register Stride: 256 bytes
+  Instance Stride: 4 bytes
+
+  Module: PktUARTTX
+  There are 1 of PktUARTTX in configuration
+  Version: 0
+  Registers: 4
+  BaseAddress: 6100
+  ClockFrequency: 100.000 MHz
+  Register Stride: 256 bytes
+  Instance Stride: 4 bytes
+
+  Module: PktUARTRX
+  There are 1 of PktUARTRX in configuration
+  Version: 0
+  Registers: 4
+  BaseAddress: 6500
   ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
@@ -61,15 +88,6 @@ Modules in configuration:
   ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 64 bytes
-
-  Module: StepGen
-  There are 5 of StepGen in configuration
-  Version: 2
-  Registers: 10
-  BaseAddress: 2000
-  ClockFrequency: 100.000 MHz
-  Register Stride: 256 bytes
-  Instance Stride: 4 bytes
 
   Module: LED
   There are 1 of LED in configuration
@@ -85,23 +103,23 @@ Configuration pin-out:
 IO Connections for P2
 DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
- 1                      0   IOPort       StepGen          0        Dir/Table2      (Out)
-14                      1   IOPort       StepGen          0        Step/Table1     (Out)
- 2                      2   IOPort       StepGen          1        Dir/Table2      (Out)
-15                      3   IOPort       StepGen          1        Step/Table1     (Out)
- 3                      4   IOPort       StepGen          2        Dir/Table2      (Out)
-16                      5   IOPort       StepGen          2        Step/Table1     (Out)
- 4                      6   IOPort       StepGen          3        Dir/Table2      (Out)
-17                      7   IOPort       StepGen          3        Step/Table1     (Out)
- 5                      8   IOPort       StepGen          4        Dir/Table2      (Out)
- 6                      9   IOPort       StepGen          4        Step/Table1     (Out)
- 7                     10   IOPort       SSerial          0        TXData0         (Out)
- 8                     11   IOPort       SSerial          0        RXData0         (In)
- 9                     12   IOPort       SSerial          0        TXData1         (Out)
-10                     13   IOPort       SSerial          0        RXData1         (In)
-11                     14   IOPort       QCount           2        Quad-A          (In)
-12                     15   IOPort       QCount           1        Quad-A          (In)
-13                     16   IOPort       QCount           0        Quad-A          (In)
+ 1                      0   IOPort       PktUARTTX        0        TXEna           (Out)
+14                      1   IOPort       PktUARTTX        0        TXData          (Out)
+ 2                      2   IOPort       PktUARTRX        0        RXData          (In)
+15                      3   IOPort       SSerial          0        TXData1         (Out)
+ 3                      4   IOPort       SSerial          0        RXData1         (In)
+16                      5   IOPort       SSerial          0        TXData0         (Out)
+ 4                      6   IOPort       SSerial          0        RXData0         (In)
+17                      7   IOPort       MuxedQCountSel   0        MuxSel0         (Out)
+ 5                      8   IOPort       MuxedQCount      0        MuxQ-A          (In)
+ 6                      9   IOPort       MuxedQCount      0        MuxQ-B          (In)
+ 7                     10   IOPort       MuxedQCount      0        MuxQ-IDX        (In)
+ 8                     11   IOPort       MuxedQCount      1        MuxQ-A          (In)
+ 9                     12   IOPort       MuxedQCount      1        MuxQ-B          (In)
+10                     13   IOPort       MuxedQCount      1        MuxQ-IDX        (In)
+11                     14   IOPort       MuxedQCount      2        MuxQ-A          (In)
+12                     15   IOPort       MuxedQCount      2        MuxQ-B          (In)
+13                     16   IOPort       MuxedQCount      2        MuxQ-IDX        (In)
 
 IO Connections for P1
 DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir

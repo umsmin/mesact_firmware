@@ -45,7 +45,7 @@ Modules in configuration:
   Instance Stride: 4 bytes
 
   Module: QCount
-  There are 3 of QCount in configuration
+  There are 1 of QCount in configuration
   Version: 2
   Registers: 5
   BaseAddress: 3000
@@ -99,27 +99,27 @@ DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func
  8                     11   IOPort       SSerial          0        RXData0         (In)
  9                     12   IOPort       SSerial          0        TXData1         (Out)
 10                     13   IOPort       SSerial          0        RXData1         (In)
-11                     14   IOPort       QCount           2        Quad-A          (In)
-12                     15   IOPort       QCount           1        Quad-A          (In)
+11                     14   IOPort       QCount           0        Quad-IDX        (In)
+12                     15   IOPort       QCount           0        Quad-B          (In)
 13                     16   IOPort       QCount           0        Quad-A          (In)
 
 IO Connections for P1
 DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
- 1                     17   IOPort       None           
-14                     18   IOPort       None           
- 2                     19   IOPort       None           
-15                     20   IOPort       None           
- 3                     21   IOPort       None           
-16                     22   IOPort       None           
- 4                     23   IOPort       None           
-17                     24   IOPort       None           
- 5                     25   IOPort       None           
- 6                     26   IOPort       None           
+ 1                     17   IOPort       SSerial          0        RXData2         (In)
+14                     18   IOPort       SSerial          0        RXData3         (In)
+ 2                     19   IOPort       SSerial          0        RXData4         (In)
+15                     20   IOPort       SSerial          0        RXData5         (In)
+ 3                     21   IOPort       SSerial          0        TXData2         (Out)
+16                     22   IOPort       SSerial          0        TXData3         (Out)
+ 4                     23   IOPort       SSerial          0        TXData4         (Out)
+17                     24   IOPort       SSerial          0        TXData5         (Out)
+ 5                     25   IOPort       SSerial          0        RXData6         (In)
+ 6                     26   IOPort       SSerial          0        RXData7         (In)
  7                     27   IOPort       None           
  8                     28   IOPort       None           
- 9                     29   IOPort       None           
-10                     30   IOPort       None           
+ 9                     29   IOPort       SSerial          0        TXData6         (Out)
+10                     30   IOPort       SSerial          0        TXData7         (Out)
 11                     31   IOPort       None           
 12                     32   IOPort       None           
 13                     33   IOPort       None           

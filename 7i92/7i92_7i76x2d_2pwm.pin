@@ -44,8 +44,17 @@ Modules in configuration:
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
+  Module: PWM
+  There are 2 of PWM in configuration
+  Version: 0
+  Registers: 5
+  BaseAddress: 4100
+  ClockFrequency: 200.000 MHz
+  Register Stride: 256 bytes
+  Instance Stride: 4 bytes
+
   Module: QCount
-  There are 3 of QCount in configuration
+  There are 2 of QCount in configuration
   Version: 2
   Registers: 5
   BaseAddress: 3000
@@ -63,7 +72,7 @@ Modules in configuration:
   Instance Stride: 64 bytes
 
   Module: StepGen
-  There are 5 of StepGen in configuration
+  There are 8 of StepGen in configuration
   Version: 2
   Registers: 10
   BaseAddress: 2000
@@ -99,28 +108,28 @@ DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func
  8                     11   IOPort       SSerial          0        RXData0         (In)
  9                     12   IOPort       SSerial          0        TXData1         (Out)
 10                     13   IOPort       SSerial          0        RXData1         (In)
-11                     14   IOPort       QCount           2        Quad-A          (In)
-12                     15   IOPort       QCount           1        Quad-A          (In)
+11                     14   IOPort       QCount           0        Quad-IDX        (In)
+12                     15   IOPort       QCount           0        Quad-B          (In)
 13                     16   IOPort       QCount           0        Quad-A          (In)
 
 IO Connections for P1
 DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
- 1                     17   IOPort       None           
-14                     18   IOPort       None           
- 2                     19   IOPort       None           
-15                     20   IOPort       None           
- 3                     21   IOPort       None           
-16                     22   IOPort       None           
- 4                     23   IOPort       None           
-17                     24   IOPort       None           
- 5                     25   IOPort       None           
- 6                     26   IOPort       None           
- 7                     27   IOPort       None           
- 8                     28   IOPort       None           
- 9                     29   IOPort       None           
-10                     30   IOPort       None           
-11                     31   IOPort       None           
-12                     32   IOPort       None           
-13                     33   IOPort       None           
+ 1                     17   IOPort       StepGen          5        Dir/Table2      (Out)
+14                     18   IOPort       StepGen          5        Step/Table1     (Out)
+ 2                     19   IOPort       StepGen          6        Dir/Table2      (Out)
+15                     20   IOPort       StepGen          6        Step/Table1     (Out)
+ 3                     21   IOPort       StepGen          7        Dir/Table2      (Out)
+16                     22   IOPort       StepGen          7        Step/Table1     (Out)
+ 4                     23   IOPort       PWM              0        Dir             (Out)
+17                     24   IOPort       PWM              0        PWM             (Out)
+ 5                     25   IOPort       PWM              1        Dir             (Out)
+ 6                     26   IOPort       PWM              1        PWM             (Out)
+ 7                     27   IOPort       SSerial          0        TXData2         (Out)
+ 8                     28   IOPort       SSerial          0        RXData2         (In)
+ 9                     29   IOPort       SSerial          0        TXData3         (Out)
+10                     30   IOPort       SSerial          0        RXData3         (In)
+11                     31   IOPort       QCount           1        Quad-IDX        (In)
+12                     32   IOPort       QCount           1        Quad-B          (In)
+13                     33   IOPort       QCount           1        Quad-A          (In)
 

@@ -74,7 +74,7 @@ Modules in configuration:
 Configuration pin-out:
 
 IO Connections for P2
-Pin#                  I/O   Pri. func    Sec. func       Chan      Pin func        Pin Dir
+DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
  1                      0   IOPort       StepGen          0        Step/Table1     (Out)
 14                      1   IOPort       StepGen          0        Dir/Table2      (Out)
@@ -95,7 +95,7 @@ Pin#                  I/O   Pri. func    Sec. func       Chan      Pin func     
 13                     16   IOPort       SSerial          0        RXData0         (In)
 
 IO Connections for P1
-Pin#                  I/O   Pri. func    Sec. func       Chan      Pin func        Pin Dir
+DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
  1                     17   IOPort       None           
 14                     18   IOPort       None           

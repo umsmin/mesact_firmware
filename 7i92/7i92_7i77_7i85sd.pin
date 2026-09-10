@@ -92,7 +92,7 @@ Modules in configuration:
 Configuration pin-out:
 
 IO Connections for P2
-Pin#                  I/O   Pri. func    Sec. func       Chan      Pin func        Pin Dir
+DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
  1                      0   IOPort       SSerial          0        TXEn2           (Out)
 14                      1   IOPort       SSerial          0        TXData2         (Out)
@@ -113,7 +113,7 @@ Pin#                  I/O   Pri. func    Sec. func       Chan      Pin func     
 13                     16   IOPort       MuxedQCount      2        MuxQ-IDX        (In)
 
 IO Connections for P1
-Pin#                  I/O   Pri. func    Sec. func       Chan      Pin func        Pin Dir
+DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
  1                     17   IOPort       SSerial          0        RXData3         (In)
 14                     18   IOPort       SSerial          0        TXData3         (Out)
