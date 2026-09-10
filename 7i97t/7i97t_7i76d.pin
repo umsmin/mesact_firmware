@@ -82,7 +82,7 @@ Modules in configuration:
 
   Module: PWM
   There are 6 of PWM in configuration
-  Version: 0
+  Version: 1
   Registers: 5
   BaseAddress: 4100
   ClockFrequency: 160.000 MHz
@@ -150,34 +150,34 @@ TB5-17,18              21   IOPort       SSR              0        Out-02       
 TB5-19,20              22   IOPort       SSR              0        Out-03          (Out)
 TB5-21,22              23   IOPort       SSR              0        Out-04          (Out)
 TB5-23,24              24   IOPort       SSR              0        Out-05          (Out)
-Internal               25   IOPort       SSR              0        AC Ref          (Out)
-Internal               26   IOPort       InMux            0        Addr0           (Out)
-Internal               27   IOPort       InMux            0        Addr1           (Out)
-Internal               28   IOPort       InMux            0        Addr2           (Out)
-Internal               29   IOPort       InMux            0        Addr3           (Out)
-Internal               30   IOPort       InMux            0        Data0           (In)
+Internal-SSR           25   IOPort       SSR              0        AC Ref          (Out)
+TB4-1,12, TB5-1,12     26   IOPort       InMux            0        Addr0           (Out)
+TB4-1,12, TB5-1,12     27   IOPort       InMux            0        Addr1           (Out)
+TB4-1,12, TB5-1,12     28   IOPort       InMux            0        Addr2           (Out)
+TB4-1,12, TB5-1,12     29   IOPort       InMux            0        Addr3           (Out)
+TB4-1,12, TB5-1,12     30   IOPort       InMux            0        Data0           (In)
 TB4-15,16              31   IOPort       SSerial          0        RXData2         (In)
 TB4-17,18              32   IOPort       SSerial          0        TXData2         (Out)
 Internal-TXEn          33   IOPort       SSerial          0        TXEn2           (Out)
 
-IO Connections for P1 -> 7I76
+IO Connections for P1 -> 7I97_2
 Pin#                  I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
-TB2-4,5                34   IOPort       StepGen          0        Dir/Table2      (Out)
-TB2-2,3                35   IOPort       StepGen          0        Step/Table1     (Out)
-TB2-10,11              36   IOPort       StepGen          1        Dir/Table2      (Out)
-TB2-8,9                37   IOPort       StepGen          1        Step/Table1     (Out)
-TB2-16,17              38   IOPort       StepGen          2        Dir/Table2      (Out)
-TB2-14,15              39   IOPort       StepGen          2        Step/Table1     (Out)
-TB2-22,23              40   IOPort       StepGen          3        Dir/Table2      (Out)
-TB2-20,21              41   IOPort       StepGen          3        Step/Table1     (Out)
-TB3-4,5                42   IOPort       StepGen          4        Dir/Table2      (Out)
-TB3-2,3                43   IOPort       StepGen          4        Step/Table1     (Out)
-Internal-Field-IO      44   IOPort       SSerial          0        TXData0         (Out)
-Internal-Field-IO      45   IOPort       SSerial          0        RXData0         (In)
-TB3-18,19              46   IOPort       SSerial          0        TXData1         (Out)
-TB3-16,17              47   IOPort       SSerial          0        RXData1         (In)
-TB3-13,14              48   IOPort       MuxedQCount      3        MuxQ-A          (In)
-TB3-10,11              49   IOPort       MuxedQCount      3        MuxQ-B          (In)
-TB3-7,8                50   IOPort       MuxedQCount      3        MuxQ-IDX        (In)
+P1-01/DB25-01          34   IOPort       StepGen          0        Dir/Table2      (Out)
+P1-02/DB25-14          35   IOPort       StepGen          0        Step/Table1     (Out)
+P1-03/DB25-02          36   IOPort       StepGen          1        Dir/Table2      (Out)
+P1-04/DB25-15          37   IOPort       StepGen          1        Step/Table1     (Out)
+P1-05/DB25-03          38   IOPort       StepGen          2        Dir/Table2      (Out)
+P1-06/DB25-16          39   IOPort       StepGen          2        Step/Table1     (Out)
+P1-07/DB25-04          40   IOPort       StepGen          3        Dir/Table2      (Out)
+P1-08/DB25-17          41   IOPort       StepGen          3        Step/Table1     (Out)
+P1-09/DB25-05          42   IOPort       StepGen          4        Dir/Table2      (Out)
+P1-11/DB25-06          43   IOPort       StepGen          4        Step/Table1     (Out)
+P1-13/DB25-07          44   IOPort       SSerial          0        TXData0         (Out)
+P1-15/DB25-08          45   IOPort       SSerial          0        RXData0         (In)
+P1-17/DB25-09          46   IOPort       SSerial          0        TXData1         (Out)
+P1-19/DB25-10          47   IOPort       SSerial          0        RXData1         (In)
+P1-21/DB25-11          48   IOPort       MuxedQCount      3        MuxQ-A          (In)
+P1-23/DB25-12          49   IOPort       MuxedQCount      3        MuxQ-B          (In)
+P1-25/DB25-13          50   IOPort       MuxedQCount      3        MuxQ-IDX        (In)
 

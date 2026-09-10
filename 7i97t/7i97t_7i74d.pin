@@ -7,8 +7,8 @@ General configuration information:
   FPGA Pins: 256
   Number of IO Ports: 3
   Width of one I/O port: 17
-  Clock Low frequency: 80.0000 MHz
-  Clock High frequency: 175.0000 MHz
+  Clock Low frequency: 100.0000 MHz
+  Clock High frequency: 160.0000 MHz
   IDROM Type: 3
   Instance Stride 0: 4
   Instance Stride 1: 64
@@ -22,7 +22,7 @@ Modules in configuration:
   Version: 0
   Registers: 7
   BaseAddress: 7000
-  ClockFrequency: 80.000 MHz
+  ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -31,7 +31,7 @@ Modules in configuration:
   Version: 0
   Registers: 3
   BaseAddress: 0C00
-  ClockFrequency: 80.000 MHz
+  ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -40,7 +40,7 @@ Modules in configuration:
   Version: 0
   Registers: 5
   BaseAddress: 1000
-  ClockFrequency: 80.000 MHz
+  ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -49,7 +49,7 @@ Modules in configuration:
   Version: 4
   Registers: 5
   BaseAddress: 3600
-  ClockFrequency: 80.000 MHz
+  ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -58,7 +58,7 @@ Modules in configuration:
   Version: 0
   Registers: 0
   BaseAddress: 0000
-  ClockFrequency: 80.000 MHz
+  ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -67,16 +67,16 @@ Modules in configuration:
   Version: 0
   Registers: 6
   BaseAddress: 5B00
-  ClockFrequency: 80.000 MHz
+  ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 64 bytes
 
   Module: PWM
   There are 6 of PWM in configuration
-  Version: 0
+  Version: 1
   Registers: 5
   BaseAddress: 4100
-  ClockFrequency: 175.000 MHz
+  ClockFrequency: 160.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -85,7 +85,7 @@ Modules in configuration:
   Version: 0
   Registers: 2
   BaseAddress: 7D00
-  ClockFrequency: 80.000 MHz
+  ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -94,7 +94,7 @@ Modules in configuration:
   Version: 0
   Registers: 5
   BaseAddress: 8000
-  ClockFrequency: 80.000 MHz
+  ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -103,7 +103,7 @@ Modules in configuration:
   Version: 0
   Registers: 1
   BaseAddress: 0200
-  ClockFrequency: 80.000 MHz
+  ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -141,34 +141,34 @@ TB5-17,18              21   IOPort       SSR              0        Out-02       
 TB5-19,20              22   IOPort       SSR              0        Out-03          (Out)
 TB5-21,22              23   IOPort       SSR              0        Out-04          (Out)
 TB5-23,24              24   IOPort       SSR              0        Out-05          (Out)
-Internal               25   IOPort       SSR              0        AC Ref          (Out)
-Internal               26   IOPort       InMux            0        Addr0           (Out)
-Internal               27   IOPort       InMux            0        Addr1           (Out)
-Internal               28   IOPort       InMux            0        Addr2           (Out)
-Internal               29   IOPort       InMux            0        Addr3           (Out)
-Internal               30   IOPort       InMux            0        Data0           (In)
+Internal-SSR           25   IOPort       SSR              0        AC Ref          (Out)
+TB4-1,12, TB5-1,12     26   IOPort       InMux            0        Addr0           (Out)
+TB4-1,12, TB5-1,12     27   IOPort       InMux            0        Addr1           (Out)
+TB4-1,12, TB5-1,12     28   IOPort       InMux            0        Addr2           (Out)
+TB4-1,12, TB5-1,12     29   IOPort       InMux            0        Addr3           (Out)
+TB4-1,12, TB5-1,12     30   IOPort       InMux            0        Data0           (In)
 TB4-15,16              31   IOPort       SSerial          0        RXData0         (In)
 TB4-17,18              32   IOPort       SSerial          0        TXData0         (Out)
 Internal-TXEn          33   IOPort       SSerial          0        TXEn0           (Out)
 
-IO Connections for P1 -> 7I74
+IO Connections for P1 -> 7I97_2
 Pin#                  I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
-CHAN0-RX               34   IOPort       None           
-CHAN1-RX               35   IOPort       SSerial          0        RXData1         (In)
-CHAN2-RX               36   IOPort       SSerial          0        RXData2         (In)
-CHAN3-RX               37   IOPort       SSerial          0        RXData3         (In)
-CHAN0-TX               38   IOPort       None           
-CHAN1-TX               39   IOPort       SSerial          0        TXData1         (Out)
-CHAN2-TX               40   IOPort       SSerial          0        TXData2         (Out)
-CHAN3-TX               41   IOPort       SSerial          0        TXData3         (Out)
-CHAN4-RX               42   IOPort       SSerial          0        RXData4         (In)
-CHAN5-RX               43   IOPort       SSerial          0        RXData5         (In)
-CHAN6-RX               44   IOPort       SSerial          0        RXData6         (In)
-CHAN7-RX               45   IOPort       SSerial          0        RXData7         (In)
-CHAN4-TX               46   IOPort       SSerial          0        TXData4         (Out)
-CHAN5-TX               47   IOPort       SSerial          0        TXData5         (Out)
-CHAN6-TX               48   IOPort       SSerial          0        TXData6         (Out)
-CHAN7-TX               49   IOPort       SSerial          0        TXData7         (Out)
-CHAN7-TXEn             50   IOPort       SSerial          0        TXEn7           (Out)
+P1-01/DB25-01          34   IOPort       None           
+P1-02/DB25-14          35   IOPort       SSerial          0        RXData1         (In)
+P1-03/DB25-02          36   IOPort       SSerial          0        RXData2         (In)
+P1-04/DB25-15          37   IOPort       SSerial          0        RXData3         (In)
+P1-05/DB25-03          38   IOPort       None           
+P1-06/DB25-16          39   IOPort       SSerial          0        TXData1         (Out)
+P1-07/DB25-04          40   IOPort       SSerial          0        TXData2         (Out)
+P1-08/DB25-17          41   IOPort       SSerial          0        TXData3         (Out)
+P1-09/DB25-05          42   IOPort       SSerial          0        RXData4         (In)
+P1-11/DB25-06          43   IOPort       SSerial          0        RXData5         (In)
+P1-13/DB25-07          44   IOPort       SSerial          0        RXData6         (In)
+P1-15/DB25-08          45   IOPort       SSerial          0        RXData7         (In)
+P1-17/DB25-09          46   IOPort       SSerial          0        TXData4         (Out)
+P1-19/DB25-10          47   IOPort       SSerial          0        TXData5         (Out)
+P1-21/DB25-11          48   IOPort       SSerial          0        TXData6         (Out)
+P1-23/DB25-12          49   IOPort       SSerial          0        TXData7         (Out)
+P1-25/DB25-13          50   IOPort       SSerial          0        TXEn7           (Out)
 

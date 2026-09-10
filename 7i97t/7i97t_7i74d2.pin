@@ -7,8 +7,8 @@ General configuration information:
   FPGA Pins: 256
   Number of IO Ports: 3
   Width of one I/O port: 17
-  Clock Low frequency: 100.0000 MHz
-  Clock High frequency: 160.0000 MHz
+  Clock Low frequency: 80.0000 MHz
+  Clock High frequency: 175.0000 MHz
   IDROM Type: 3
   Instance Stride 0: 4
   Instance Stride 1: 64
@@ -22,7 +22,7 @@ Modules in configuration:
   Version: 0
   Registers: 7
   BaseAddress: 7000
-  ClockFrequency: 100.000 MHz
+  ClockFrequency: 80.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -31,7 +31,7 @@ Modules in configuration:
   Version: 0
   Registers: 3
   BaseAddress: 0C00
-  ClockFrequency: 100.000 MHz
+  ClockFrequency: 80.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -40,16 +40,16 @@ Modules in configuration:
   Version: 0
   Registers: 5
   BaseAddress: 1000
-  ClockFrequency: 100.000 MHz
+  ClockFrequency: 80.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
   Module: MuxedQCount
-  There are 10 of MuxedQCount in configuration
+  There are 6 of MuxedQCount in configuration
   Version: 4
   Registers: 5
   BaseAddress: 3600
-  ClockFrequency: 100.000 MHz
+  ClockFrequency: 80.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -58,7 +58,7 @@ Modules in configuration:
   Version: 0
   Registers: 0
   BaseAddress: 0000
-  ClockFrequency: 100.000 MHz
+  ClockFrequency: 80.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -67,25 +67,16 @@ Modules in configuration:
   Version: 0
   Registers: 6
   BaseAddress: 5B00
-  ClockFrequency: 100.000 MHz
+  ClockFrequency: 80.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 64 bytes
 
-  Module: StepGen
-  There are 4 of StepGen in configuration
-  Version: 2
-  Registers: 10
-  BaseAddress: 2000
-  ClockFrequency: 100.000 MHz
-  Register Stride: 256 bytes
-  Instance Stride: 4 bytes
-
   Module: PWM
   There are 6 of PWM in configuration
-  Version: 1
+  Version: 0
   Registers: 5
   BaseAddress: 4100
-  ClockFrequency: 160.000 MHz
+  ClockFrequency: 175.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -94,7 +85,7 @@ Modules in configuration:
   Version: 0
   Registers: 2
   BaseAddress: 7D00
-  ClockFrequency: 100.000 MHz
+  ClockFrequency: 80.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -103,7 +94,7 @@ Modules in configuration:
   Version: 0
   Registers: 5
   BaseAddress: 8000
-  ClockFrequency: 100.000 MHz
+  ClockFrequency: 80.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -112,7 +103,7 @@ Modules in configuration:
   Version: 0
   Registers: 1
   BaseAddress: 0200
-  ClockFrequency: 100.000 MHz
+  ClockFrequency: 80.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
@@ -163,21 +154,21 @@ Internal-TXEn          33   IOPort       SSerial          0        TXEn0        
 IO Connections for P1 -> 7I97_2
 Pin#                  I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
-P1-01/DB25-01          34   IOPort       SSerial          0        RXData1         (In)
-P1-02/DB25-14          35   IOPort       SSerial          0        TXData1         (Out)
-P1-03/DB25-02          36   IOPort       StepGen          3        Step/Table1     (Out)
-P1-04/DB25-15          37   IOPort       StepGen          3        Dir/Table2      (Out)
-P1-05/DB25-03          38   IOPort       StepGen          2        Step/Table1     (Out)
-P1-06/DB25-16          39   IOPort       StepGen          2        Dir/Table2      (Out)
-P1-07/DB25-04          40   IOPort       StepGen          1        Step/Table1     (Out)
-P1-08/DB25-17          41   IOPort       StepGen          1        Dir/Table2      (Out)
-P1-09/DB25-05          42   IOPort       StepGen          0        Step/Table1     (Out)
-P1-11/DB25-06          43   IOPort       StepGen          0        Dir/Table2      (Out)
-P1-13/DB25-07          44   IOPort       MuxedQCountSel   6        MuxSel0         (Out)
-P1-15/DB25-08          45   IOPort       MuxedQCount      3        MuxQ-A          (In)
-P1-17/DB25-09          46   IOPort       MuxedQCount      3        MuxQ-B          (In)
-P1-19/DB25-10          47   IOPort       MuxedQCount      3        MuxQ-IDX        (In)
-P1-21/DB25-11          48   IOPort       MuxedQCount      4        MuxQ-A          (In)
-P1-23/DB25-12          49   IOPort       MuxedQCount      4        MuxQ-B          (In)
-P1-25/DB25-13          50   IOPort       MuxedQCount      4        MuxQ-IDX        (In)
+P1-01/DB25-01          34   IOPort       None           
+P1-02/DB25-14          35   IOPort       SSerial          0        RXData1         (In)
+P1-03/DB25-02          36   IOPort       SSerial          0        RXData2         (In)
+P1-04/DB25-15          37   IOPort       SSerial          0        RXData3         (In)
+P1-05/DB25-03          38   IOPort       None           
+P1-06/DB25-16          39   IOPort       SSerial          0        TXData1         (Out)
+P1-07/DB25-04          40   IOPort       SSerial          0        TXData2         (Out)
+P1-08/DB25-17          41   IOPort       SSerial          0        TXData3         (Out)
+P1-09/DB25-05          42   IOPort       SSerial          0        RXData4         (In)
+P1-11/DB25-06          43   IOPort       SSerial          0        RXData5         (In)
+P1-13/DB25-07          44   IOPort       SSerial          0        RXData6         (In)
+P1-15/DB25-08          45   IOPort       SSerial          0        RXData7         (In)
+P1-17/DB25-09          46   IOPort       SSerial          0        TXData4         (Out)
+P1-19/DB25-10          47   IOPort       SSerial          0        TXData5         (Out)
+P1-21/DB25-11          48   IOPort       SSerial          0        TXData6         (Out)
+P1-23/DB25-12          49   IOPort       SSerial          0        TXData7         (Out)
+P1-25/DB25-13          50   IOPort       SSerial          0        TXEn7           (Out)
 

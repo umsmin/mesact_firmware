@@ -44,8 +44,17 @@ Modules in configuration:
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
+  Module: BISS
+  There are 8 of BISS in configuration
+  Version: 0
+  Registers: 4
+  BaseAddress: 4A00
+  ClockFrequency: 100.000 MHz
+  Register Stride: 256 bytes
+  Instance Stride: 4 bytes
+
   Module: MuxedQCount
-  There are 10 of MuxedQCount in configuration
+  There are 6 of MuxedQCount in configuration
   Version: 4
   Registers: 5
   BaseAddress: 3600
@@ -70,15 +79,6 @@ Modules in configuration:
   ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 64 bytes
-
-  Module: StepGen
-  There are 4 of StepGen in configuration
-  Version: 2
-  Registers: 10
-  BaseAddress: 2000
-  ClockFrequency: 100.000 MHz
-  Register Stride: 256 bytes
-  Instance Stride: 4 bytes
 
   Module: PWM
   There are 6 of PWM in configuration
@@ -163,21 +163,21 @@ Internal-TXEn          33   IOPort       SSerial          0        TXEn0        
 IO Connections for P1 -> 7I97_2
 Pin#                  I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
-P1-01/DB25-01          34   IOPort       SSerial          0        RXData1         (In)
-P1-02/DB25-14          35   IOPort       SSerial          0        TXData1         (Out)
-P1-03/DB25-02          36   IOPort       StepGen          3        Step/Table1     (Out)
-P1-04/DB25-15          37   IOPort       StepGen          3        Dir/Table2      (Out)
-P1-05/DB25-03          38   IOPort       StepGen          2        Step/Table1     (Out)
-P1-06/DB25-16          39   IOPort       StepGen          2        Dir/Table2      (Out)
-P1-07/DB25-04          40   IOPort       StepGen          1        Step/Table1     (Out)
-P1-08/DB25-17          41   IOPort       StepGen          1        Dir/Table2      (Out)
-P1-09/DB25-05          42   IOPort       StepGen          0        Step/Table1     (Out)
-P1-11/DB25-06          43   IOPort       StepGen          0        Dir/Table2      (Out)
-P1-13/DB25-07          44   IOPort       MuxedQCountSel   6        MuxSel0         (Out)
-P1-15/DB25-08          45   IOPort       MuxedQCount      3        MuxQ-A          (In)
-P1-17/DB25-09          46   IOPort       MuxedQCount      3        MuxQ-B          (In)
-P1-19/DB25-10          47   IOPort       MuxedQCount      3        MuxQ-IDX        (In)
-P1-21/DB25-11          48   IOPort       MuxedQCount      4        MuxQ-A          (In)
-P1-23/DB25-12          49   IOPort       MuxedQCount      4        MuxQ-B          (In)
-P1-25/DB25-13          50   IOPort       MuxedQCount      4        MuxQ-IDX        (In)
+P1-01/DB25-01          34   IOPort       BISS             0        Din             (In)
+P1-02/DB25-14          35   IOPort       BISS             1        Din             (In)
+P1-03/DB25-02          36   IOPort       BISS             2        Din             (In)
+P1-04/DB25-15          37   IOPort       BISS             3        Din             (In)
+P1-05/DB25-03          38   IOPort       BISS             0        Clk             (Out)
+P1-06/DB25-16          39   IOPort       BISS             1        Clk             (Out)
+P1-07/DB25-04          40   IOPort       BISS             2        Clk             (Out)
+P1-08/DB25-17          41   IOPort       BISS             3        Clk             (Out)
+P1-09/DB25-05          42   IOPort       BISS             4        Din             (In)
+P1-11/DB25-06          43   IOPort       BISS             5        Din             (In)
+P1-13/DB25-07          44   IOPort       BISS             6        Din             (In)
+P1-15/DB25-08          45   IOPort       BISS             7        Din             (In)
+P1-17/DB25-09          46   IOPort       BISS             4        Clk             (Out)
+P1-19/DB25-10          47   IOPort       BISS             5        Clk             (Out)
+P1-21/DB25-11          48   IOPort       BISS             6        Clk             (Out)
+P1-23/DB25-12          49   IOPort       BISS             7        Clk             (Out)
+P1-25/DB25-13          50   IOPort       BISS             7        ClkEn           (Out)
 
